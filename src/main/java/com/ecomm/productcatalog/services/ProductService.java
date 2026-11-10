@@ -6,9 +6,11 @@ import com.ecomm.productcatalog.repository.CategoryRepository;
 import com.ecomm.productcatalog.repository.ProductRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @Data
 @AllArgsConstructor
 public class ProductService {
@@ -20,7 +22,7 @@ public class ProductService {
     }
 
     public List<Product> getProductByCategory(Long categoryId){
-        return productRepository.fingByCategoryId(categoryId);
+        return productRepository.findByCategoryId(categoryId);
     }
 
 
